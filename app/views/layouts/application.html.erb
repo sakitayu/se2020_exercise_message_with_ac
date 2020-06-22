@@ -10,6 +10,8 @@
   </head>
 
   <body>
+    <li><%= link_to 'ユーザー一覧', users_path if logged_in? %></li>
+    
     <% flash.each do |key, value| %>
       <%= content_tag(:div, value, class: "#{key}") %>
     <% end %>
@@ -21,5 +23,6 @@
       <%= link_to "Login", new_session_path %>
     <% end %>
     <%= yield %>
+
   </body>
 </html>
