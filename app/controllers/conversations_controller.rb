@@ -1,8 +1,9 @@
 class ConversationsController < ApplicationController
+  # Deviseを使用しているならif logged_in?の代わりに下記を使用する。
+  # before_action :authenticate_user!
   def index
     @conversations = Conversation.all
   end
-  
   def create
     # 自身で作ったログイン機能であれば、独自実装してあるはずの
     # logged_in?メソッドを使用して、ログイン時のみ会話を保存できるようにする。
@@ -17,7 +18,6 @@ class ConversationsController < ApplicationController
       redirect_to root_path
     end  
   end
-
   private
   def conversation_params
     params.permit(:sender_id, :recipient_id)
