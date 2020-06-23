@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+
+.self-container{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.partner-container{
+  display: flex;
+  flex-direction: row;
+  margin:0;
+  padding:0;
+}
+
+#massages {
+  text-align: left;
+  margin:0;
+  padding:0;
+}
