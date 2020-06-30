@@ -26,8 +26,14 @@
   padding:0;
 }
 
-#massages {
+.self_massage {
+  background-color: aquamarine;
+  color:red;
   text-align: left;
   margin:0;
   padding:0;
+}
+
+.latest_message {
+  width: 200px;
 }

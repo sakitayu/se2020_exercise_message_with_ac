@@ -4,6 +4,14 @@ class MessagesController < ApplicationController
   end
 
   def index
+
+    #会話相手ユーザーのIDを@opposite_idに格納
+    if @conversation.sender_id == current_user.id
+      @opposite_id = @conversation.recipient_id
+    else
+      @opposite_id = @conversation.sender_id
+    end
+    @opposite_user = User.find(@opposite_id)
     # indexアクションに書かれたこれらの記載は、
     # 一つ一つの部分で何をしているかの理解をわかりやすくするために
     # このような記載にしていますが、実戦で用いるのには少々冗長なコードとなっているので
