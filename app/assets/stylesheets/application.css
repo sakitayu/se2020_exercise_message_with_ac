@@ -50,9 +50,10 @@ textarea {
   width:300px;
   height:auto;
   resize: vertical;
+  border-radius: 0.3em;
 }
 
-.input_text {
+.input_text form{
   display: flex;
   justify-content: center;
   margin: 0.3rem 0 0 0;
@@ -67,9 +68,12 @@ textarea {
   color:white;
   width:3rem;
   height:2rem;
+  transition-duration: 0.2s;
+  margin:0.3rem;
 }
 
 .submit_buttom:hover{
   background-color: rgb(118, 173, 175);
   color:white;
+  transition-duration: 0s;
 }
