@@ -48,11 +48,18 @@ body {
 }
 
 textarea {
+  position: absolute;
   border: medium 10px #0000ff;
-  width:300px;
+  width:20rem;
   height:auto;
   resize: vertical;
   border-radius: 0.3em;
+  bottom: 0;
+  margin-bottom: 1rem;
+}
+
+.input_text {
+
 }
 
 .input_text form{
@@ -63,6 +70,7 @@ textarea {
 }
 
 .submit_buttom {
+  position: absolute;
   margin-bottom:1.7rem;
   background-color: cadetblue;
   border-style: none;
@@ -71,7 +79,9 @@ textarea {
   width:3rem;
   height:2rem;
   transition-duration: 0.2s;
-  margin:0.3rem;
+  margin:0.3rem 5.3rem 1.3rem 0.3rem;
+  right:0;
+  bottom:0;
 }
 
 .submit_buttom:hover{
