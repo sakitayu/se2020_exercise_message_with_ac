@@ -25,14 +25,14 @@ body {
   display: flex;
   flex-direction: row-reverse;
   text-align: right;
-  margin:0;
+  margin:0 0 1rem 0;
   padding:0;
 }
 
 .partner-container{
   display: flex;
   flex-direction: row;
-  margin:0;
+  margin:0 0 1rem 0;
   padding:0;
 }
 
@@ -40,6 +40,8 @@ body {
 .latest_message {
   width: 400px;
   height:auto;
+  margin:0;
+  padding:0;
 }
 
 .past_message {
@@ -56,6 +58,7 @@ textarea {
   border-radius: 0.3em;
   bottom: 0;
   margin-bottom: 1rem;
+  font-size: 1.0rem;
 }
 
 .input_text {
@@ -79,8 +82,7 @@ textarea {
   width:3rem;
   height:2rem;
   transition-duration: 0.2s;
-  margin:0.3rem 5.3rem 1.3rem 0.3rem;
-  right:0;
+  margin:0.3rem 0rem 1.3rem 12rem;
   bottom:0;
 }
 
