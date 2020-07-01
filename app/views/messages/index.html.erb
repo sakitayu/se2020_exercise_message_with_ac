@@ -7,27 +7,30 @@
   <% @messages.each do |message| %>
     <% if message.body.present? %>
       <div class="item">
+
       <% if message.user == current_user %>
         <div class="self-container">
-        <div>
+      <% else %>
+        <div class="partner-container">
       <% end %>
-          
-          <p class="list">
-            <p class="item">
-              <i class="right triangle icon"></i>
-              <%= @opposite_user.name %> | <%= message.body %>
-              <% if message.user == current_user %>
-                <%= message.read ? '既読' : '未読' %>
-              <% end %> 
-              <% if current_user.id == message.user.id %>
-                <%= link_to '削除', conversation_message_path(@conversation.id,message.id), method: :delete %>
-              <% end %>
-            </p>
-          </p>
-      <% if message.user == current_user %>
+
+          <div class="past_message">
+                <i class="right triangle icon"></i>
+                <% if message.user == current_user %>
+                  <%= current_user.name %>
+                <% else %>
+                  <%= @opposite_user.name %>
+                <% end %>
+                 | <%= message.body %>
+                <% if message.user == current_user %>
+                  <%#= message.read ? '既読' : '未読' %>
+                <% end %> 
+                <% if current_user.id == message.user.id %>
+                  <%= link_to '削除', conversation_message_path(@conversation.id,message.id), method: :delete %>
+                <% end %>
+          </div>
         </div>
-        </div>
-      <% end %>
+
       </div>
     <% end %>
   <% end %>
@@ -38,16 +41,16 @@
 
 <%#= @massages %>
 <%#= current_user.id %>
-<div class="self-container">
+<div class="input_text">
 
-<%= form_with(model: [@conversation, @message]) do |f| %>
-  
-    <%= f.text_area :body, class: "form-control" %>
-  
-    <%= f.text_field :user_id, value: current_user.id, type: "hidden" %>
-  
-    <%= f.submit "△" %>
-  
-<% end %>
+  <%= form_with(model: [@conversation, @message]) do |f| %>
+    
+      <%= f.text_area :body, class: "form-control", placeholder: "メッセージを入力" %>
+    
+      <%= f.text_field :user_id, value: current_user.id, type: "hidden" %>
+    
+      <%= f.submit "送信", class: "submit_buttom" %>
+    
+  <% end %>
 
 </div>

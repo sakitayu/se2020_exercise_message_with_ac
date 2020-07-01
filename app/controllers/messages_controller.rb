@@ -11,6 +11,7 @@ class MessagesController < ApplicationController
     else
       @opposite_id = @conversation.sender_id
     end
+    #会話相手ユーザーのテーブルを@opposite_userに格納
     @opposite_user = User.find(@opposite_id)
     # indexアクションに書かれたこれらの記載は、
     # 一つ一つの部分で何をしているかの理解をわかりやすくするために

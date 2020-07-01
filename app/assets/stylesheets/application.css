@@ -14,9 +14,17 @@
  *= require_self
  */
 
+body {
+  font-family: YuGothic,'Yu Gothic','ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
+  font-size: 1.0rem;
+}
+
 .self-container{
   display: flex;
   flex-direction: row-reverse;
+  text-align: right;
+  margin:0;
+  padding:0;
 }
 
 .partner-container{
@@ -26,14 +34,42 @@
   padding:0;
 }
 
-.self_massage {
-  background-color: aquamarine;
-  color:red;
-  text-align: left;
-  margin:0;
+
+.latest_message {
+  width: 400px;
+  height:auto;
+}
+
+.past_message {
+  width: 400px;
+  height:auto;
+}
+
+textarea {
+  border: medium 10px #0000ff;
+  width:300px;
+  height:auto;
+  resize: vertical;
+}
+
+.input_text {
+  display: flex;
+  justify-content: center;
+  margin: 0.3rem 0 0 0;
   padding:0;
 }
 
-.latest_message {
-  width: 200px;
+.submit_buttom {
+  margin-bottom:1.7rem;
+  background-color: cadetblue;
+  border-style: none;
+  border-radius: 5rem;
+  color:white;
+  width:3rem;
+  height:2rem;
+}
+
+.submit_buttom:hover{
+  background-color: rgb(118, 173, 175);
+  color:white;
 }
