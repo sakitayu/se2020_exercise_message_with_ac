@@ -66,10 +66,6 @@ textarea {
   font-size: 1.0rem;
 }
 
-.input_text {
-
-}
-
 .input_text form{
   display: flex;
   justify-content: center;
