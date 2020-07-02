@@ -10,24 +10,26 @@
 
       <% if message.user == current_user %>
         <div class="self-container">
+          <div class="past_self_message">
       <% else %>
         <div class="partner-container">
+          <div class="past_partner_message">
       <% end %>
+          
+            <i class="right triangle icon"></i>
+            <% if message.user == current_user %>
+              <%= current_user.name %>
+            <% else %>
+              <%= @opposite_user.name %>
+            <% end %>
+             | <%= message.body %>
+            <% if message.user == current_user %>
+              <%#= message.read ? '既読' : '未読' %>
+            <% end %> 
+            <% if current_user.id == message.user.id %>
+              <%= link_to '削除', conversation_message_path(@conversation.id,message.id), method: :delete %>
+            <% end %>
 
-          <div class="past_message">
-                <i class="right triangle icon"></i>
-                <% if message.user == current_user %>
-                  <%= current_user.name %>
-                <% else %>
-                  <%= @opposite_user.name %>
-                <% end %>
-                 | <%= message.body %>
-                <% if message.user == current_user %>
-                  <%#= message.read ? '既読' : '未読' %>
-                <% end %> 
-                <% if current_user.id == message.user.id %>
-                  <%= link_to '削除', conversation_message_path(@conversation.id,message.id), method: :delete %>
-                <% end %>
           </div>
         </div>
 
