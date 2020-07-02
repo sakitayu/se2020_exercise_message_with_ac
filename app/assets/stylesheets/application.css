@@ -23,6 +23,11 @@ body {
   background-size:cover;
 }
 
+div {
+  margin: 0;
+  padding: 0;
+}
+
 .self-container{
   display: flex;
   flex-direction: row-reverse;
@@ -40,6 +45,25 @@ body {
   width:400px;
 }
 
+.partner_span{
+  margin: 0 0.3rem 0 0;
+  top:1.2rem;
+  position: relative;
+  width:50px;
+  background-color: darkkhaki;
+  padding:0;
+}
+
+.latest_box{
+  margin:0 0 1rem 0;
+  padding:0;
+}
+
+.latest_box span{
+  background-color: darkkhaki;
+  width:50px;
+  padding:5px 2.5px 5px 0;
+}
 
 .latest_message {
   width: auto;
@@ -49,16 +73,17 @@ body {
   display: inline-block;
   position: relative;
   margin-top: 10px;
-  margin-left: 80px;
+  margin-left: 0px;
+  margin-right: 40px;
   padding: 10px;
   background: white;
-  border-radius: 1.3rem;
+  border-radius: 2rem;
 }
 
 .latest_message::after{
   content: "";
   position: absolute;
-  margin: auto 0;
+  margin: 0 0;
   top: 0;
   bottom: 1.5rem;
   left: -0.5rem;
@@ -73,7 +98,7 @@ body {
 }
 
 .latest_message p{
-  margin:0 0 0 0;
+  margin:0;
 }
 
 .past_self_message {
@@ -85,15 +110,16 @@ body {
   position: relative;
   margin-top: 10px;
   margin-right: -80px;
+  margin-left: 120px;
   padding: 10px;
   background: rgb(116, 224, 158);
-  border-radius: 1.3rem;
+  border-radius: 2rem;
 }
 
 .past_self_message::after{
   content: "";
   position: absolute;
-  margin: auto 0;
+  margin: 0 0;
   top: 0;
   bottom: 1.5rem;
   right: -0.5rem;
@@ -115,16 +141,16 @@ body {
   display: inline-block;
   position: relative;
   margin-top: 10px;
-  margin-left: 80px;
+  margin-left: 0px;
   padding: 10px;
   background: white;
-  border-radius: 1.3rem;
+  border-radius: 2rem;
 }
 
 .past_partner_message::after{
   content: "";
   position: absolute;
-  margin: auto 0;
+  margin: 0 0;
   top: 0;
   bottom: 1.5rem;
   left: -0.5rem;

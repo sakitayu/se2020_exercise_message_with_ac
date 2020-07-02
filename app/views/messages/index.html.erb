@@ -13,6 +13,7 @@
           <div class="past_self_message">
       <% else %>
         <div class="partner-container">
+          <span class="partner_span">ここ顔</span>
           <div class="past_partner_message">
       <% end %>
           
@@ -22,7 +23,7 @@
             <% else %>
               <%= @opposite_user.name %>
             <% end %>
-             | <%= message.body %>
+            | <%= message.body %>
             <% if message.user == current_user %>
               <%#= message.read ? '既読' : '未読' %>
             <% end %> 
