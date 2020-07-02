@@ -42,7 +42,6 @@
 <%#= @massages %>
 <%#= current_user.id %>
 <div class="input_text">
-
   <%= form_with(model: [@conversation, @message]) do |f| %>
     
       <%= f.text_area :body, class: "form-control", placeholder: "メッセージを入力" %>
@@ -52,7 +51,6 @@
       <%= f.submit "送信", class: "submit_buttom" %>
     
   <% end %>
-
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery-autosize@1.18.18/jquery.autosize.min.js"></script>
