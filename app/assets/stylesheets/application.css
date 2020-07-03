@@ -21,6 +21,8 @@ body {
   overflow-wrap: break-word;
   background:url(sky02.jpg) ;
   background-size:cover;
+  height: 100%;
+  margin:0;
 }
 
 div {
@@ -40,7 +42,7 @@ div {
 .partner-container{
   display: flex;
   flex-direction: row;
-  margin:0 0 1rem 0;
+  margin:0 0 1rem 0.5rem;
   padding:0;
   width:400px;
 }
@@ -170,6 +172,10 @@ div {
   z-index: -1;
 }
 
+.input_text {
+
+}
+
 textarea {
   position: absolute;
   border: medium 10px #0969B0;
@@ -183,9 +189,6 @@ textarea {
 }
 
 .input_bottom {
-}
-
-.input_text {
 }
 
 .input_text form{
@@ -213,4 +216,15 @@ textarea {
   background-color: #fc98f7;
   color:white;
   transition-duration: 0s;
+}
+
+.bottom_black {
+  margin:0;
+  padding:0;
+  height: 80px;
+  background-color: #6F9ECC;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 1;
 }

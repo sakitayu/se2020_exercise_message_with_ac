@@ -1,8 +1,17 @@
+<div class="bottom_black">
+  <div class="input_text">
+    <%= form_with(model: [@conversation, @message]) do |f| %>
+      
+        <%= f.text_area :body, class: "form-control", placeholder: "メッセージを入力" %>
+      
+        <%= f.text_field :user_id, value: current_user.id, type: "hidden" %>
+      
+        <%= f.submit "送信", class: "submit_buttom" %>
+      
+    <% end %>
+  </div>
+</div>
 
-
-<% if @over_ten %>
-  <%= link_to '以前のメッセージ', '?m=all' %>
-<% end %>
 <div class="ui segment">
   <% @messages.each do |message| %>
     <% if message.body.present? %>
@@ -38,13 +47,14 @@
     <% end %>
   <% end %>
 </div>
-  <div class="partner-container">
-    <div id="opposite_id_is_<%= @opposite_id %>"></div>
-  </div>
+
+<div class="partner-container">
+  <div id="opposite_id_is_<%= @opposite_id %>"></div>
+</div>
 
 <%#= @massages %>
 <%#= current_user.id %>
-<div class="input_text">
+<div class="input_text"><!--
   <%= form_with(model: [@conversation, @message]) do |f| %>
     
       <%= f.text_area :body, class: "form-control", placeholder: "メッセージを入力" %>
@@ -53,7 +63,7 @@
     
       <%= f.submit "送信", class: "submit_buttom" %>
     
-  <% end %>
+  <% end %> -->
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery-autosize@1.18.18/jquery.autosize.min.js"></script>
