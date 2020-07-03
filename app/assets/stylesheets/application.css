@@ -218,7 +218,7 @@ textarea {
   transition-duration: 0s;
 }
 
-.bottom_black {
+#bottom_block {
   margin:0;
   padding:0;
   height: 80px;
