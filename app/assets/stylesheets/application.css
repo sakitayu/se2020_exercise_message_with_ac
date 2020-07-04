@@ -172,10 +172,6 @@ div {
   z-index: -1;
 }
 
-.input_text {
-
-}
-
 textarea {
   position: absolute;
   border: medium 10px #0969B0;
@@ -186,9 +182,6 @@ textarea {
   bottom: 0;
   margin-bottom: 1rem;
   font-size: 1.0rem;
-}
-
-.input_bottom {
 }
 
 .input_text form{
