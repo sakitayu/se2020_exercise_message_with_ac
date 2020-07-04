@@ -54,6 +54,7 @@
 
 <%#= @massages %>
 
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-autosize@1.18.18/jquery.autosize.min.js"></script>
 
 <script>
@@ -63,10 +64,20 @@
 </script>
 
 <script>
-  function GetHeight() {
-    let element = document.getElementById('bottom_block');
-    let text_area_height = document.getElementById('form-control').clientHeight;
-    text_area_height = text_area_height + 40;
-    element.style.height = text_area_height + "px";
-  }
+    (function() {
+        const target = document.getElementById("form-control");
+        const observer = new MutationObserver(function() {
+            console.log(target.style.width, target.style.height);
+            let element = document.getElementById('bottom_block');
+            let text_area_height = document.getElementById('form-control').clientHeight;
+            text_area_height = text_area_height + 40;
+            element.style.height = text_area_height + "px";
+        });
+
+        const options = {
+            attriblutes: true,
+            attributeFilter: ["style"]
+        };
+        observer.observe(target, options);
+    })();
 </script>
