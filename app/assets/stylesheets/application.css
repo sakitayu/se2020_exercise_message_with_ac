@@ -221,3 +221,7 @@ textarea {
   bottom: 0;
   z-index: 1;
 }
+
+.profile_show_img {
+  width: 10rem;
+}

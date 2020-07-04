@@ -4,7 +4,7 @@
 <p>
   <strong>Image:</strong>
   <% unless @user.image.url == nil %>
-  <%= image_tag @user.image.url %>
+  <%= image_tag @user.image.url, class: "profile_show_img" %>
   <% end %>
 </p>
 
