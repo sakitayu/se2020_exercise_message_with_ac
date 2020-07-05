@@ -2,6 +2,9 @@
 <div id="bottom_block">
   <div class="input_text">
     <%= form_with(model: [@conversation, @message]) do |f| %>
+      <div class="scroll_down">
+        <%= image_tag "pics.png", class:"message_pics" %>
+      </div>
       <%= f.text_area :body, id: "form-control", placeholder: "メッセージを入力", onkeyup: "GetHeight();" %>
       <%= f.text_field :user_id, value: current_user.id, type: "hidden" %>
       <%= f.submit "送信", class: "submit_buttom" %>

@@ -179,12 +179,12 @@ textarea {
   position: absolute;
   border: medium 10px #0969B0;
   width:20rem;
-  height:auto;
+  height:3rem;
   resize: vertical;
   border-radius: 0.3em;
   bottom: 0;
   margin-bottom: 1rem;
-  font-size: 1.0rem;
+  font-size: 1.3rem;
 }
 
 .input_text form{
@@ -197,20 +197,41 @@ textarea {
 .submit_buttom {
   position: absolute;
   margin-bottom:1.7rem;
-  background-color: #f060e9;
+  background-color: #e055d9;
   border-style: none;
-  border-radius: 5rem;
+  border-radius: 0.2rem;
   color:white;
   width:3rem;
-  height:2rem;
+  height:3rem;
   transition-duration: 0.2s;
-  margin:0.3rem 0rem 1.3rem 12rem;
+  margin:0.3rem 0rem 1.2rem 12.3rem;
   bottom:0;
+  font-size:1rem;
 }
 
 .submit_buttom:hover{
-  background-color: #fc98f7;
+  background-color: #f186ec;
   color:white;
+  transition-duration: 0s;
+}
+
+.scroll_down {
+  position: absolute;
+  margin-bottom:1.7rem;
+  background-color: #525a6b;
+  border-style: none;
+  border-radius: 0.2rem;
+  color:white;
+  width:3rem;
+  height:3rem;
+  transition-duration: 0.2s;
+  margin:0.3rem 1rem 1.2rem -12.3rem;
+  bottom:0;
+  font-size:2rem;
+}
+
+.scroll_down:hover {
+  background-color: #757983;
   transition-duration: 0s;
 }
 
@@ -286,8 +307,16 @@ textarea {
 }
 
 .header_right {
-  margin:-0.2rem 1rem 0 0;
+  margin:-0.2rem 0.5rem 0 0;
   padding:0;
   height:2rem;
+}
 
+.all_user:hover{
+  font-weight: bold;
+}
+
+.message_pics {
+  width:2rem;
+  padding:0.5rem;
 }

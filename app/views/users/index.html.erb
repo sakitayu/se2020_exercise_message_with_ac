@@ -1,11 +1,15 @@
-<h2>ユーザー</h2>
+<br>
+<br>
+<br>
+<h2>ユーザー一覧</h2>
 <% @users.each do |user| %>
   <% if user.id != current_user.id %>
-      <div class="item">
-        <%= link_to user.name, user %>
-        <%= link_to 'メッセージ', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: :post %>
+      <div class="item"> 
+        <%= user.name %>
+        <%= link_to 'メッセージ', conversations_path(sender_id: current_user.id, recipient_id: user.id), class: "all_user", method: :post %>
       </div>
-    <%= render 'follow_form', user: user %> <!-- フォロー機能が実装されて入ればこの一文も必要 -->
+    <%#= render 'follow_form', user: user %> <!-- フォロー機能が実装されて入ればこの一文も必要 -->
   <% end %>
+  <br>
 <% end %>
 
