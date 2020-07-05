@@ -25,6 +25,11 @@ body {
   margin:0 0 100px 0;
 }
 
+a {
+  color:white;
+  text-decoration: none;
+}
+
 div {
   margin: 0;
   padding: 0;
@@ -49,10 +54,9 @@ div {
 
 .partner_span{
   margin: 0 0.3rem 0 0;
-  top:1.2rem;
+  top:0.4rem;
   position: relative;
   width:50px;
-  background-color: darkkhaki;
   padding:0;
   white-space: nowrap;
 }
@@ -66,10 +70,9 @@ div {
 }
 
 .latest_span{
-  top:1.2rem;
+  top:0.4rem;
   position: relative;
   margin: 0 0.3rem 0 0;
-  background-color: darkkhaki;
   width:50px;
   white-space: nowrap;
 }
@@ -112,7 +115,7 @@ div {
 .past_self_message {
   width: auto;
   height:auto;
-  margin:0;
+  margin-top:0;
   padding:0;
   display: inline-block;
   position: relative;
@@ -224,4 +227,67 @@ textarea {
 
 .profile_show_img {
   width: 10rem;
+}
+.profile_message_img {
+  width: 3rem;
+  border-radius: 3rem;
+}
+
+#head_block {
+  position:fixed;
+  color:white;
+  background-color: #273147;
+  width:100%;
+  height: 80px;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin:0;
+  padding:0;
+  margin-bottom:1rem;
+  z-index: 1;
+}
+
+.left_arrow {
+  width:2rem;
+  padding-top:1.5rem;
+}
+
+.head_person {
+  width:1rem;
+  padding-top:1.5rem;
+}
+
+.head_door {
+  width:1rem;
+}
+
+.delete_message {
+  right:2rem;
+  position: absolute;
+  font-size: 0.2rem;
+}
+
+.delete_box {
+  height:0.5rem;
+  margin:0;
+  padding:0;
+}
+
+.header_name {
+
+  padding-top:1rem;
+}
+
+.header_space {
+  height:100px;
+}
+
+.header_right {
+  margin:-0.2rem 1rem 0 0;
+  padding:0;
+  height:2rem;
+
 }

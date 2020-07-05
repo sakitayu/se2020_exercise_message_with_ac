@@ -1,6 +1,8 @@
 <div class="latest_box">
-  <div class="latest_span">ここ顔</div>
+  <div class="latest_span">
+    <%= image_tag message.user.image.url, class: "profile_message_img" %>
+  </div>
   <div class="latest_message">
-    <p><%= message.user.name %> | <%= message.body %></p>
+    <p><%= message.body %></p>
   </div>
 </div>
