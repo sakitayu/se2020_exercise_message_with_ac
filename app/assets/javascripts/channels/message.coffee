@@ -7,8 +7,9 @@ App.message = App.cable.subscriptions.create "MessageChannel",
 
   received: (data) ->
     user_id = data['user_id']
+    conversation_id = data['conversation_id']
     #class_name = "#messages"
-    class_name = "#opposite_id_is_" + user_id
+    class_name = "#conversation_id_is_" + user_id + conversation_id
     $(class_name).append data['message']
 
   speak: (message) ->
