@@ -1,4 +1,4 @@
-
+<main>
 <div id="bottom_block">
   <div class="input_text">
     <%= form_with(model: [@conversation, @message]) do |f| %>
@@ -49,11 +49,10 @@
 </div>
 
 <div class="partner-container">
-  <%= @conversation.id %>
   <div id="conversation_id_is_<%= @opposite_id %><%= @conversation.id %>"></div>
 </div>
 
-<%#= @massages %>
+</main>
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-autosize@1.18.18/jquery.autosize.min.js"></script>
